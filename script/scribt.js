@@ -10,11 +10,9 @@ function LeerDatos() {
     correo = document.getElementById("correo").value
     mensaje = document.getElementById("textarea").value
     ValidarData(nombre, correo, mensaje)
-    GuardarLocalStorage(nombre,correo,mensaje)
+    GuardarLocalStorage(nombre, correo, mensaje)
 }
-function ValidarData(nombre, correo, mensaje)
- 
-{
+function ValidarData(nombre, correo, mensaje) {
     if (nombre.length == 0 || correo.length == 0 || mensaje.length == 0) {
 
         Swal.fire({
@@ -25,10 +23,10 @@ function ValidarData(nombre, correo, mensaje)
         })
     }
 }
-function GuardarLocalStorage(nombre,correo,mensaje) {
-    localStorage.setItem("Nombre",nombre)
-    localStorage.setItem("Correo",correo)
-    localStorage.setItem("Mensaje",mensaje)
+function GuardarLocalStorage(nombre, correo, mensaje) {
+    localStorage.setItem("Nombre", nombre)
+    localStorage.setItem("Correo", correo)
+    localStorage.setItem("Mensaje", mensaje)
     ListarData()
 }
 function ListarData() {
